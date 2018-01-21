@@ -10,8 +10,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { BaseRequestOptions } from '@angular/http';
+import { BaseRequestOptions, HttpModule } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { MockBackend } from '@angular/http/testing';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
+    HttpModule,
   ],
   providers: [
     AuthGuard, 

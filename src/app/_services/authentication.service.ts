@@ -3,7 +3,7 @@ import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-Injectable()
+@Injectable()
 export class AuthenticationService {
 
     public token: string;
@@ -30,6 +30,6 @@ export class AuthenticationService {
 
     logout(): void {
         this.token = null;
-        localStorage.removeItem('CurrentUser');
+        localStorage.removeItem('currentUser');
     }
 }
