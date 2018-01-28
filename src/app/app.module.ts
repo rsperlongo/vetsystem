@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { BaseRequestOptions, HttpModule } from '@angular/http';
-import { MockBackend } from '@angular/http/testing';
+import { MockBackend, MockConnection  } from '@angular/http/testing';
 import { FormsModule } from '@angular/forms';
 
 
