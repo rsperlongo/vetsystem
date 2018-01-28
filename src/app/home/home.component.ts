@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-//import { ROUTER_DIRECTIVES } from '@angular/router';
 
 import { User } from '../_models/index';
 import { UserService } from '../_services/index';
@@ -7,7 +6,6 @@ import { UserService } from '../_services/index';
 @Component({
   moduleId: module.id,
   templateUrl: 'home.component.html',
-  //directives: [ROUTER_DIRECTIVES],
 })
 
 export class HomeComponent implements OnInit {
@@ -16,7 +14,6 @@ export class HomeComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit() {
-    // get users from secure api end point
     this.userService.getUsers()
       .subscribe(users => {
         this.users = users;
