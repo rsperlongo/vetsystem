@@ -1,4 +1,4 @@
-import { AuthenticationService } from './../_services/authentication.service';
+import { AuthService } from './../auth.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,29 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  model: any = {};
-  loading = false;
-  error = '';
 
+  constructor(private authService: AuthService) { }
 
-  constructor(private router: Router, 
-              private authenticationService: AuthenticationService) { }
+  ngOnInit() {}
 
-  ngOnInit() {
-    this.authenticationService.logout() ;
-  }
-
-  login() {
-    this.loading = true;
-    this.authenticationService.login(this.model.username, this.model.password)
-      .subscribe(result => {
-        if (result === true) {
-          this.router.navigate(['/home']);
-        } else {
-          this.error = 'Username or password is incorrect';
-          this.loading = false;
-        }
-      });
+  loginGoogle() {
+    this.authService.googleLogin();
   }
 
 }
