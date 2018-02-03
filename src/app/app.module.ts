@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireAuthModule  } from 'angularfire2/auth'
 import { AngularFireModule } from 'angularfire2';
 import { AuthService } from './auth.service';
+import { SignupComponent } from './signup/signup.component';
+import { EmailComponent } from './email/email.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBDyydIH5v2k-rFctWb5T7gf6BfS-2Yztc",
@@ -27,7 +29,9 @@ const firebaseConfig = {
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent,
+    EmailComponent
   ],
   imports: [
     BrowserModule,
