@@ -15,6 +15,9 @@ import { AngularFireModule } from 'angularfire2';
 import { AuthService } from './auth.service';
 import { SignupComponent } from './signup/signup.component';
 import { EmailComponent } from './email/email.component';
+import { ClientesComponent } from './clientes/clientes.component';
+import { AnimaisComponent } from './animais/animais.component';
+import { FuncionariosComponent } from './funcionarios/funcionarios.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBDyydIH5v2k-rFctWb5T7gf6BfS-2Yztc",
@@ -31,7 +34,10 @@ const firebaseConfig = {
     HomeComponent,
     LoginComponent,
     SignupComponent,
-    EmailComponent
+    EmailComponent,
+    ClientesComponent,
+    AnimaisComponent,
+    FuncionariosComponent
   ],
   imports: [
     BrowserModule,
