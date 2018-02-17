@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase } from 'angularfire2/database'; 
+import { AngularFireDatabase} from 'angularfire2/database'; 
 import { Observable } from 'rxjs/Observable';
+
+import { Clientes } from './clientes.models';
 
 @Component({
   selector: 'app-clientes',
@@ -8,8 +10,6 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./clientes.component.scss']
 })
 export class ClientesComponent implements OnInit {
-
-  clientesObservable: Observable<any[]>
 
   constructor() { }
 
