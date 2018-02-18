@@ -18,6 +18,8 @@ import { EmailComponent } from './email/email.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { AnimaisComponent } from './animais/animais.component';
 import { FuncionariosComponent } from './funcionarios/funcionarios.component';
+import { HeaderComponent } from './template/header/header.component';
+import { SidebarComponent } from './template/sidebar/sidebar.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBDyydIH5v2k-rFctWb5T7gf6BfS-2Yztc",
@@ -37,7 +39,9 @@ const firebaseConfig = {
     EmailComponent,
     ClientesComponent,
     AnimaisComponent,
-    FuncionariosComponent
+    FuncionariosComponent,
+    HeaderComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
