@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AngularFireDatabase} from 'angularfire2/database'; 
 import { Observable } from 'rxjs/Observable';
+import { AngularFirestore } from 'angularfire2/firestore';
 
 import { Clientes } from './clientes.models';
 
@@ -12,7 +13,11 @@ import { Clientes } from './clientes.models';
 
 export class ClientesComponent implements OnInit {
 
-  constructor() { }
+  clientes: Observable<any[]>;
+
+  constructor(db: AngularFirestore ) {
+    this.clientes = db.collection('clientes').valueChanges();
+  }
 
   ngOnInit() {
   }

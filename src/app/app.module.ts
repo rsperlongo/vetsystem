@@ -1,3 +1,4 @@
+import { AngularFirestore } from 'angularfire2/firestore';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -50,7 +51,7 @@ const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

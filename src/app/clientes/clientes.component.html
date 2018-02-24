@@ -24,37 +24,16 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr *ngFor="let cliente of clientes | async" >
               <th scope="row">1</th>
-              <td>Membro</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>teste@teste.com</td>
+              <td>{{cliente.nome}}</td>
+              <td>{{cliente.endereco}}</td>
+              <td>{{cliente.telefone}}</td>
+              <td>{{cliente.email}}</td>
               <td><button type="button" class="btn btn-info">Editar</button>
                   <button type="button" class="btn btn-danger">Excluir</button>
               </td>
               
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-              <td>teste@teste.com</td>
-              <td>
-                <button type="button" class="btn btn-info">Editar</button>
-                <button type="button" class="btn btn-danger">Excluir</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-              <td>teste@teste.com</td>
-              <td>
-                <button type="button" class="btn btn-info">Editar</button>
-                <button type="button" class="btn btn-danger">Excluir</button>
-              </td>
             </tr>
           </tbody>
         </table>
