@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { BaseRequestOptions, HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 
 //Firebase 
 import { AngularFireAuthModule  } from 'angularfire2/auth'
@@ -22,6 +22,10 @@ import { AnimaisComponent } from './animais/animais.component';
 import { FuncionariosComponent } from './funcionarios/funcionarios.component';
 import { HeaderComponent } from './template/header/header.component';
 import { SidebarComponent } from './template/sidebar/sidebar.component';
+
+//ng-bootstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from './template/modal/modal.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBDyydIH5v2k-rFctWb5T7gf6BfS-2Yztc",
@@ -43,16 +47,18 @@ const firebaseConfig = {
     AnimaisComponent,
     FuncionariosComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
+    NgbModule.forRoot(),
     AngularFireAuthModule
   ],
-  providers: [AuthService, AngularFirestore, AngularFireDatabase],
+  providers: [AuthService, AngularFirestore, AngularFireDatabase, FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
