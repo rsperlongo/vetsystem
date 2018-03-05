@@ -14,14 +14,19 @@ export class ClientesService {
     
     constructor(private db: AngularFireDatabase){
         this.clientesRef = db.list('clientes');
+        this.clientesRef.remove('2');
         this.clientes = this.clientesRef.snapshotChanges().map(changes => {
             return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
         }); 
 
     }
 
-    addClientes(newName: string){
+    addItem(newName: string){
     this.clientesRef.push({ text: newName });
+    }
+
+    deleteItem(key: string) {
+        this.clientesRef.remove(key);
     }
         
 }
